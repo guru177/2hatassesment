@@ -1,0 +1,6 @@
+/* Extra safety: prevent accidental x-overflow from SVG/patterns */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}

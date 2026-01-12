@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Learn Graphics Design for Life | Hello World</title>
+    <meta name="description"
+        content="Stay informed, stay ahead—explore technology, gadgets, and innovation with insights that help you learn graphics design for life." />
+    <meta name="keywords"
+        content="graphics design, learn design, design course, creative learning, technology, gadgets, innovation, digital universe" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#2F5B50" />
+
+    <link rel="canonical" href="https://example.com/" />
+    <link rel="icon" href="img/logo.webp" sizes="any" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Learn Graphics Design for Life | Hello World" />
+    <meta property="og:description"
+        content="Your gateway to the digital universe—where innovation meets insight. Learn graphics design for life." />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="img/og-cover.webp" />
+    <meta property="og:image:alt" content="Learn Graphics Design for Life" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Learn Graphics Design for Life | Hello World" />
+    <meta name="twitter:description"
+        content="Explore technology, gadgets, and innovation. Learn graphics design for life." />
+    <meta name="twitter:image" content="img/og-cover.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind config (keep AFTER CDN to match your original behavior) -->
+    <script src="assets/js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-white text-ink overflow-x-hidden">
+    <!-- Full screen, no side gaps, no horizontal scroll -->
+    <main class="w-full min-h-screen overflow-x-hidden">
+        <section class="w-full min-h-screen overflow-hidden">
+            <!-- IMPORTANT: use w-full (NOT w-screen) to avoid scrollbar width overflow -->
+            <div class="grid grid-cols-12 min-h-screen w-full">
+
+                <!-- LEFT -->
+                <div class="col-span-12 lg:col-span-8 relative bg-white flex flex-col overflow-hidden">
+
+                    <!-- pattern bg (clipped) -->
+                    <div class="absolute inset-0 overflow-hidden">
+                        <img src="img/herobg.webp" alt="" class="h-[100%]">
+                    </div>
+
+                    <!-- content -->
+                    <div class="relative flex-1 px-6 sm:px-10 lg:px-[118px] pt-7">
+
+                        <!-- top bar -->
+                        <div class="flex items-center justify-between w-full gap-3 xs:gap-4 minilap:gap-6 laptop:gap-8">
+
+                            <!-- LEFT: logo + brand -->
+                            <div class="flex items-center gap-3 xs:gap-4 min-w-0 flex-1">
+                                <!-- Logo -->
+                                <div
+                                    class="shrink-0 w-[36px] h-[36px] xs:w-[42px] xs:h-[42px] minilap:w-[52px] minilap:h-[52px] laptop:w-[60px] laptop:h-[60px] desktop:w-[60px] desktop:h-[60px] xdesktop:w-[80px] xdesktop:h-[80px] rounded-md grid place-items-center">
+                                    <img src="img/logo.webp" alt="Logo" class="w-full h-full object-contain" />
+                                </div>
+
+                                <!-- Brand text -->
+                                <div class="min-w-0">
+                                    <div class="[font-family:Nunito,sans-serif] font-semibold capitalize leading-[1] tracking-[-0.01em]
+                    text-[16px] xs:text-[18px] minilap:text-[20px] laptop:text-[24px] desktop:text-[20px] xdesktop:text-[28px]
+                    mt-[2px] xs:mt-[3px] minilap:mt-[6px] laptop:mt-[8px] desktop:mt-[10px]
+                    truncate max-w-[180px] xs:max-w-[240px] minilap:max-w-none">
+                                        Hello World!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NAV (show from mini-laptop) -->
+                            <nav class="hidden minilap:flex items-center flex-none whitespace-nowrap text-gray-500
+                gap-4 minilap:gap-4 laptop:gap-7 desktop:gap-10
+                text-[14px] minilap:text-[12px] laptop:text-[14px] desktop:text-[16px] xdesktop:text-[22px]">
+                                <a href="#" class="hover:text-black">Course</a>
+                                <a href="#" class="hover:text-black">Info</a>
+                                <a href="#" class="hover:text-black">Testimonial</a>
+                                <a href="#" class="hover:text-black">Categories</a>
+                            </nav>
+
+                            <!-- MOBILE TOGGLE (below minilap) -->
+                            <button id="menuBtn"
+                                class="minilap:hidden w-10 h-10 rounded-full border border-line grid place-items-center shrink-0"
+                                type="button" aria-label="Open menu" aria-expanded="false">
+                                <span class="w-5 h-[2px] bg-gray-700 block relative">
+                                    <span class="w-5 h-[2px] bg-gray-700 block absolute -top-2 left-0"></span>
+                                    <span class="w-5 h-[2px] bg-gray-700 block absolute top-2 left-0"></span>
+                                </span>
+                            </button>
+
+                            <!-- MOBILE MENU -->
+                            <div id="mobileMenu" class="minilap:hidden hidden absolute right-6 top-[72px] z-50 w-[240px]
+                rounded-2xl border border-line bg-white shadow-xl p-3">
+                                <a href="#"
+                                    class="block px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-black">Course</a>
+                                <a href="#"
+                                    class="block px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-black">Info</a>
+                                <a href="#"
+                                    class="block px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-black">Testimonial</a>
+                                <a href="#"
+                                    class="block px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-50 hover:text-black">Categories</a>
+                            </div>
+
+                        </div>
+
+                        <!-- hero -->
+                        <div class="pt-10 sm:pt-14 lg:pt-14 max-w-2xl">
+
+                            <!-- H1 + orange icon aligned -->
+                            <div class="flex items-end gap-4">
+                                <h1 class="[font-family:Nunito,sans-serif] font-[700] uppercase
+                  leading-[1.2] tracking-[0]
+                  text-[34px] xs:text-[40px] sm:text-[46px]
+                  minilap:text-[54px] laptop:text-[60px] desktop:text-[54.5px] xdesktop:text-[64.5px]">
+                                    LEARN GRAPHICS<br class="hidden sm:block" />
+                                    DESIGN FOR LIFE
+                                </h1>
+
+                                <!-- Orange round icon -->
+                                <div
+                                    class="shrink-0 rounded-full bg-[#FF9C66] grid place-items-center
+                  w-[28px] h-[28px]
+                  xs:w-[32px] xs:h-[32px]
+                  sm:w-[36px] sm:h-[36px]
+                  minilap:w-[40px] minilap:h-[40px]
+                  laptop:w-[44px] laptop:h-[44px]
+                  desktop:w-[48px] desktop:h-[48px]
+                  mb-[6px] xs:mb-[7px] sm:mb-[8px] minilap:mb-[9px] laptop:mb-[10px] desktop:mb-[17px] xdesktop:mb-[22px]">
+                                    <img src="img/Icon.webp" alt="" class="w-[60%] h-[60%] object-contain" />
+                                </div>
+                            </div>
+
+                            <div class="mt-6 flex items-start gap-4">
+                                <p class="[font-family:Nunito,sans-serif] font-normal tracking-[0] leading-[1.2] text-[#2D3134] align-middle max-w-xl
+                  text-[12.5px] xs:text-[12.5px] sm:text-[13px]
+                  minilap:text-[14.5px] laptop:text-[15px] desktop:text-[16px] xdesktop:text-[17.2px]">
+                                    Stay Informed, Stay Ahead: Unveiling the Future of Technology, Gadgets, and
+                                    Innovation
+                                    <span class="hidden sm:inline"><br /></span>
+                                    Your Gateway to the Digital Universe - Where Innovation Meets Insight
+                                </p>
+                            </div>
+
+                            <!-- students -->
+                            <div class="mt-12 flex flex-wrap items-center gap-14">
+                                <div>
+                                    <div class="[font-family:Nunito,sans-serif] font-normal tracking-[0] leading-[1]
+                    text-[24px] xs:text-[28px] sm:text-[32px]
+                    minilap:text-[34px] laptop:text-[36px] desktop:text-[38.7px]" data-counter data-target="5100"
+                                        data-suffix=" K" data-format="k">
+                                        0
+                                    </div>
+
+                                    <div class="text-[20px] sm:text-[20px] text-gray-500 leading-snug">
+                                        Students All<br />Over World
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <div class="flex -space-x-10">
+                                        <img class="rounded-full ring-2 ring-white object-cover
+                      w-[44px] h-[44px]
+                      xs:w-[42px] xs:h-[42px]
+                      sm:w-[52px] sm:h-[52px]
+                      minilap:w-[68px] minilap:h-[68px]
+                      laptop:w-[78px] laptop:h-[78px]
+                      desktop:w-[84.6px] desktop:h-[81.4px]" src="img/Ellipse 1.webp" alt="avatar" />
+
+                                        <img class="rounded-full ring-2 ring-white object-cover
+                      w-[44px] h-[44px]
+                      xs:w-[42px] xs:h-[42px]
+                      sm:w-[52px] sm:h-[52px]
+                      minilap:w-[68px] minilap:h-[68px]
+                      laptop:w-[78px] laptop:h-[78px]
+                      desktop:w-[84.6px] desktop:h-[81.4px]" src="img/Ellipse 2.webp" alt="avatar" />
+
+                                        <img class="rounded-full ring-2 ring-white object-cover
+                      w-[44px] h-[44px]
+                      xs:w-[42px] xs:h-[42px]
+                      sm:w-[52px] sm:h-[52px]
+                      minilap:w-[68px] minilap:h-[68px]
+                      laptop:w-[78px] laptop:h-[78px]
+                      desktop:w-[84.6px] desktop:h-[81.4px]" src="img/Ellipse 3.webp" alt="avatar" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTAs -->
+                            <div class="mt-10 flex flex-wrap items-center gap-10">
+                                <a href="#" class="inline-flex items-center justify-center px-12 py-5 rounded-full bg-brandGreen text-white hover:bg-brandOrange text-[10px] xs:text-[10px] sm:text-[12px]
+                  minilap:text-[14px] laptop:text-[16px] desktop:text-[18px] xdesktop:text-[19px]">
+                                    Book Your Seat
+                                </a>
+
+                                <a href="#" class="inline-flex items-center gap-3 minilap:gap-4 text-ink">
+                                    <span class="rounded-full grid place-items-center shrink-0
+                    w-[24px] h-[24px]
+                    xs:w-[28px] xs:h-[28px]
+                    sm:w-[32px] sm:h-[32px]
+                    minilap:w-[36px] minilap:h-[36px]
+                    laptop:w-[40px] laptop:h-[40px]
+                    desktop:w-[50px] desktop:h-[50px]
+                    xdesktop:w-[54px] desktop:h-[54px]">
+                                        <img src="img/Vector.webp" alt="" />
+                                    </span>
+
+                                    <span class="[font-family:Nunito,sans-serif] font-semibold tracking-[0]
+                    text-[14px] xs:text-[15px] sm:text-[16px]
+                    minilap:text-[17px] laptop:text-[18px] desktop:text-[20px]">
+                                        See Journey
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- bottom stats -->
+                    <div class="relative bg-brandOrange px-6 minilap:px-[118px] py-9 mt-[40px]">
+                        <div class="grid grid-cols-3 sm:grid-cols-3 gap-6 text-white">
+
+                            <div class="relative pl-4">
+                                <span
+                                    class="absolute left-0 top-1/2 -translate-y-1/2 w-[4px] h-[80px] bg-[#F7BE2C]"></span>
+
+                                <div class="[font-family:Nunito,sans-serif] font-semibold tracking-[0] leading-[1]
+                  text-[28px] xs:text-[28px] sm:text-[30px]
+                  minilap:text-[30px] laptop:text-[36px] desktop:text-[40px] xdesktop:text-[46px]" data-counter
+                                    data-target="6409" data-duration="3400" data-format="comma">
+                                    0
+                                </div>
+
+                                <div class="text-[10px] xs:text-[10px] sm:text-[10px]
+                  minilap:text-[12px] laptop:text-[16px] desktop:text-[18px] xdesktop:text-[20px]">
+                                    Success Story
+                                </div>
+                            </div>
+
+                            <div class="relative pl-4">
+                                <span
+                                    class="absolute left-0 top-1/2 -translate-y-1/2 w-[4px] h-[80px] bg-[#F7BE2C]"></span>
+
+                                <div class="[font-family:Nunito,sans-serif] font-semibold tracking-[0] leading-[1]
+                  text-[28px] xs:text-[28px] sm:text-[30px]
+                  minilap:text-[30px] laptop:text-[36px] desktop:text-[40px] xdesktop:text-[46px]" data-counter
+                                    data-target="124" data-duration="3400" data-format="comma">
+                                    0
+                                </div>
+
+                                <div class="text-[10px] xs:text-[10px] sm:text-[10px]
+                  minilap:text-[12px] laptop:text-[16px] desktop:text-[18px] xdesktop:text-[20px]">
+                                    Expert Instructor
+                                </div>
+                            </div>
+
+                            <div class="relative pl-4">
+                                <span
+                                    class="absolute left-0 top-1/2 -translate-y-1/2 w-[4px] h-[80px] bg-[#F7BE2C]"></span>
+
+                                <div class="[font-family:Nunito,sans-serif] font-semibold tracking-[0] leading-[1]
+                  text-[28px] xs:text-[28px] sm:text-[30px]
+                  minilap:text-[30px] laptop:text-[36px] desktop:text-[40px] xdesktop:text-[46px]" data-counter
+                                    data-target="54.749" data-duration="3400" data-format="decimal" data-decimals="3">
+                                    0.000
+                                </div>
+
+                                <div class="text-[10px] xs:text-[10px] sm:text-[10px]
+                  minilap:text-[12px] laptop:text-[16px] desktop:text-[18px] xdesktop:text-[20px]">
+                                    Hours Tutored
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-span-12 lg:col-span-4 relative overflow-hidden">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <img src="img/mask.webp" alt="" class="h-[100%]">
+                    </div>
+
+                    <div class="relative h-full flex items-center justify-center p-6 sm:p-8">
+                        <div class="grid grid-cols-2 gap-4 sm:gap-6 place-items-center">
+
+                            <!-- Left column -->
+                            <div class="flex flex-col gap-4 sm:gap-6">
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/1.webp" alt="portrait" />
+                                </div>
+
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/3.webp" alt="portrait" />
+                                </div>
+
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/5.webp" alt="portrait" />
+                                </div>
+                            </div>
+
+                            <!-- Right column -->
+                            <div class="flex flex-col gap-4 sm:gap-6">
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/2.webp" alt="portrait" />
+                                </div>
+
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/4.webp" alt="portrait" />
+                                </div>
+
+                                <div
+                                    class="w-46 h-46 overflow-hidden group transition-all duration-300 ease-out hover:-translate-y-1">
+                                    <img class="w-full h-full object-cover transition duration-300 group-hover:brightness-105"
+                                        src="img/6.webp" alt="portrait" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
